@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- bg_easy_sliding_tabs.xml -->
+    <color name="bg_easy_sliding_tabs_pressed">#ff5CC1CB</color>
+</resources>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="EasySlidingTabs">
+        <attr name="easyIndicatorColor" format="color" />
+        <attr name="easyUnderlineColor" format="color" />
+        <attr name="easyTabTextColor" format="color" />
+        <attr name="easySelectedTagTextColor" format="color" />
+        <attr name="easyDividerColor" format="color" />
+        <attr name="easyIndicatorHeight" format="dimension" />
+        <attr name="easyUnderlineHeight" format="dimension" />
+        <attr name="easyDividerPadding" format="dimension" />
+        <attr name="easyTabPaddingLeftRight" format="dimension" />
+        <attr name="easyTabBackground" format="reference" />
+        <attr name="easyScrollOffset" format="dimension" />
+        <attr name="easyShouldExpand" format="boolean" />
+        <attr name="easyTextAllCaps" format="boolean" />
+        <attr name="easyIndicatorDrawable" format="reference" />
+    </declare-styleable>
+</resources>
