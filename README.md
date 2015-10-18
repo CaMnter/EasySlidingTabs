@@ -171,7 +171,7 @@ public class TabsFragmentAdapter extends FragmentPagerAdapter implements EasySli
 
 ## Consequence
 
-![readme_1](https://github.com/CaMnter/AIEditText/raw/master/readme/readme_1.png)
+![readme_1](https://github.com/CaMnter/EasySlidingTabs/raw/master/readme/readme_easy_sliding_tabs_1.png)
 
 
 
