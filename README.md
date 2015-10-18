@@ -1,6 +1,5 @@
 EasySlidingTabs
 ==
-[toc]
 
 ---
 
