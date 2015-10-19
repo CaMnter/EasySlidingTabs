@@ -3,6 +3,13 @@ EasySlidingTabs
 
 ---
 
+## Blog
+
+ [EasySlidingTabs](http://blog.csdn.net/qq_16430735/article/details/49229189)
+
+
+---
+
 ## EasySlidingTabs Attribute
 
 
@@ -171,6 +178,7 @@ public class TabsFragmentAdapter extends FragmentPagerAdapter implements EasySli
 ## Consequence
 
 ![readme_1](https://github.com/CaMnter/EasySlidingTabs/raw/master/readme/readme_easy_sliding_tabs_1.png)
+
 
 
 
