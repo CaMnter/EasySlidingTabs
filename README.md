@@ -3,6 +3,17 @@ EasySlidingTabs
 
 ---
 
+## Gradle
+
+```
+dependencies {
+    compile 'com.camnter.easyslidingtabs:easyslidingtabs:0.2'
+}
+
+```
+
+---
+
 ## Blog
 
  [EasySlidingTabs](http://blog.csdn.net/qq_16430735/article/details/49229189)
