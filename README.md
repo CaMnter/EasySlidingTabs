@@ -5,11 +5,10 @@ EasySlidingTabs
 
 ## Gradle
 
-```
+```Gradle
 dependencies {
     compile 'com.camnter.easyslidingtabs:easyslidingtabs:0.2'
 }
-
 ```
 
 ---
