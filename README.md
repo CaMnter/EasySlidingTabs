@@ -7,7 +7,7 @@ EasySlidingTabs
 
 ```Gradle
 dependencies {
-    compile 'com.camnter.easyslidingtabs:easyslidingtabs:0.2'
+    compile 'com.camnter.easyslidingtabs:easyslidingtabs:0.2.1'
 }
 ```
 
@@ -197,7 +197,7 @@ public class TabsFragmentAdapter extends FragmentPagerAdapter implements EasySli
 ## License
 
 
-Copyright (C) 2015 CaMnter 421482590@qq.com  
+Copyright (C) 2015 CaMnter 421482590@qq.com
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
