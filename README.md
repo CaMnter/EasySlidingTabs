@@ -197,7 +197,7 @@ public class TabsFragmentAdapter extends FragmentPagerAdapter implements EasySli
 ## License
 
 
-Copyright (C) 2015 CaMnter 421482590@qq.com
+Copyright (C) 2015 CaMnter yuanyu.camnter@gmail.com
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
