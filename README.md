@@ -7,7 +7,7 @@ EasySlidingTabs
 
 ```Gradle
 dependencies {
-    compile 'com.camnter.easyslidingtabs:easyslidingtabs:0.2.1'
+    compile 'com.camnter.easyslidingtabs:easyslidingtabs:0.3'
 }
 ```
 
