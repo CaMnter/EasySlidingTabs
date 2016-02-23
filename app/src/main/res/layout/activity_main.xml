@@ -13,7 +13,7 @@
         app:easyIndicatorColor="#ff57C1CC"
         app:easyUnderlineColor="#ffdddddd"
         app:easyTabTextColor="#ffFF4081"
-        app:easySelectedTagTextColor="#ff57C1CC"
+        app:easySelectedTagTextColor="#ff000000"
         android:paddingBottom="16dp"
         android:paddingTop="16dp" />
 

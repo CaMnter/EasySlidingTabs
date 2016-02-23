@@ -210,7 +210,7 @@ public class EasySlidingTabs extends HorizontalScrollView {
         // set tab indicator color
         this.setIndicatorColor(this.indicatorColor);
         // set tab text selected color
-        this.setSelectedTextColor(this.indicatorColor);
+        this.setSelectedTextColor(this.selectedTabTextColor);
         // set tab under line color
         this.setUnderlineColor(this.underlineColor);
         // remove the background color when the tab on clicked
