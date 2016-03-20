@@ -1,5 +1,6 @@
 package com.camnter.easytest.fragment;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -11,24 +12,31 @@ import com.camnter.easytest.R;
 
 
 /**
- * Description：
+ * Description：FourthFragment
  * Created by：CaMnter
  * Time：2015-10-17 12:15
  */
 public class FourthFragment extends Fragment {
 
-    private View self;
+    private volatile View self;
 
     private static FourthFragment instance;
 
+    @SuppressLint("ValidFragment")
     private FourthFragment() {
     }
 
     public static FourthFragment getInstance() {
-        if (instance == null) instance = new FourthFragment();
+        if (instance == null) {
+            synchronized (FourthFragment.class) {
+                if (instance == null)
+                    instance = new FourthFragment();
+            }
+        }
         return instance;
     }
 
+    @SuppressLint("InflateParams")
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {

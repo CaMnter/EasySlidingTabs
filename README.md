@@ -7,7 +7,7 @@ EasySlidingTabs
 
 ```Gradle
 dependencies {
-    compile 'com.camnter.easyslidingtabs:easyslidingtabs:0.3'
+    compile 'com.camnter.easyslidingtabs:easyslidingtabs:1.0'
 }
 ```
 
@@ -89,6 +89,7 @@ public class TabsFragmentAdapter extends FragmentPagerAdapter implements EasySli
 
     private String[] titles;
     private List<Fragment> fragments;
+
     public TabsFragmentAdapter(FragmentManager fm, String[] titles, List<Fragment> fragments) {
         super(fm);
         this.fragments = fragments;
@@ -99,8 +100,7 @@ public class TabsFragmentAdapter extends FragmentPagerAdapter implements EasySli
     public SpannableString getTabTitle(int position) {
         CharSequence title = this.getPageTitle(position);
         if (TextUtils.isEmpty(title)) return new SpannableString("");
-        SpannableString spannableString = new SpannableString(title);
-        return spannableString;
+        return new SpannableString(title);
     }
 
     /**
@@ -124,7 +124,7 @@ public class TabsFragmentAdapter extends FragmentPagerAdapter implements EasySli
     /**
      * Return the Fragment associated with a specified position.
      *
-     * @param position
+     * @param position position
      */
     @Override
     public Fragment getItem(int position) {
@@ -164,7 +164,7 @@ public class TabsFragmentAdapter extends FragmentPagerAdapter implements EasySli
     public int getCount() {
         return this.fragments.size();
     }
-    
+
 }
 ```
 
@@ -173,7 +173,8 @@ public class TabsFragmentAdapter extends FragmentPagerAdapter implements EasySli
 
 ## EasySlidingTabs set tab background
 
-**easyslidingtabs**Module：**bg_easy_sliding_tabs.xml：**
+**easyslidingtabs**  
+Module：**bg_easy_sliding_tabs.xml：**
 
 ```XML
 <selector xmlns:android="http://schemas.android.com/apk/res/android" android:exitFadeDuration="@android:integer/config_shortAnimTime">
@@ -185,9 +186,9 @@ public class TabsFragmentAdapter extends FragmentPagerAdapter implements EasySli
 
 ---
 
-## Consequence
+## Screenshot
 
-![readme_1](https://github.com/CaMnter/EasySlidingTabs/raw/master/readme/readme_easy_sliding_tabs_1.png)
+![readme_1](https://github.com/CaMnter/EasySlidingTabs/raw/master/screenshot/est.gif)
 
 
 ---

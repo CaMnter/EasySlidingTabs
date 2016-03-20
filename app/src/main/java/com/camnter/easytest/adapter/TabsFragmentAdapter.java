@@ -22,13 +22,12 @@ import android.support.v4.app.FragmentPagerAdapter;
 import android.text.SpannableString;
 import android.text.TextUtils;
 
-
 import com.camnter.easyslidingtabs.widget.EasySlidingTabs;
 
 import java.util.List;
 
 /**
- * Description：
+ * Description：TabsFragmentAdapter
  * Created by：CaMnter
  * Time：2015-10-15 14:58
  */
@@ -36,6 +35,7 @@ public class TabsFragmentAdapter extends FragmentPagerAdapter implements EasySli
 
     private String[] titles;
     private List<Fragment> fragments;
+
     public TabsFragmentAdapter(FragmentManager fm, String[] titles, List<Fragment> fragments) {
         super(fm);
         this.fragments = fragments;
@@ -46,8 +46,7 @@ public class TabsFragmentAdapter extends FragmentPagerAdapter implements EasySli
     public SpannableString getTabTitle(int position) {
         CharSequence title = this.getPageTitle(position);
         if (TextUtils.isEmpty(title)) return new SpannableString("");
-        SpannableString spannableString = new SpannableString(title);
-        return spannableString;
+        return new SpannableString(title);
     }
 
     /**
@@ -71,7 +70,7 @@ public class TabsFragmentAdapter extends FragmentPagerAdapter implements EasySli
     /**
      * Return the Fragment associated with a specified position.
      *
-     * @param position
+     * @param position position
      */
     @Override
     public Fragment getItem(int position) {
