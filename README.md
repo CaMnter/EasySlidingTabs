@@ -1,7 +1,9 @@
 EasySlidingTabs
 ==
 
----
+![Language](https://img.shields.io/badge/language-Java-EE0000.svg) [![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://github.com/CaMnter/EasyCountDownTextureView/blob/master/LICENSE) 
+![Version](https://img.shields.io/badge/version-1.0-8470FF.svg) 
+ [ ![Download](https://api.bintray.com/packages/camnter/maven/easyslidingtabs/images/download.svg) ](https://bintray.com/camnter/maven/easyslidingtabs/_latestVersion)   
 
 ## Gradle
 
@@ -11,14 +13,12 @@ dependencies {
 }
 ```
 
----
 
 ## Blog
 
  [EasySlidingTabs](http://blog.csdn.net/qq_16430735/article/details/49229189)
 
 
----
 
 ## EasySlidingTabs Attribute
 
@@ -43,7 +43,6 @@ dependencies {
     </declare-styleable>
 ```
 
----
 
 ## EasySlidingTabs Layout
 
@@ -80,7 +79,6 @@ dependencies {
 
 ```
 
----
 
 ## FragmentPagerAdapter
 
@@ -191,7 +189,6 @@ Module：**bg_easy_sliding_tabs.xml：**
 ![readme_1](https://github.com/CaMnter/EasySlidingTabs/raw/master/screenshot/est.gif)
 
 
----
 
 
 
