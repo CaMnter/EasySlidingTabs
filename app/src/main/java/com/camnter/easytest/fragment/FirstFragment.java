@@ -7,9 +7,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
 import com.camnter.easytest.R;
-
 
 /**
  * Description：FirstFragment
@@ -22,23 +20,22 @@ public class FirstFragment extends Fragment {
 
     private static FirstFragment instance;
 
-    @SuppressLint("ValidFragment")
-    private FirstFragment() {
+
+    @SuppressLint("ValidFragment") private FirstFragment() {
     }
+
 
     public static FirstFragment getInstance() {
         if (instance == null) {
             synchronized (FirstFragment.class) {
-                if (instance == null)
-                    instance = new FirstFragment();
+                if (instance == null) instance = new FirstFragment();
             }
         }
         return instance;
     }
 
-    @SuppressLint("InflateParams")
-    @Nullable
-    @Override
+
+    @SuppressLint("InflateParams") @Nullable @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         if (this.self == null) {
             this.self = inflater.inflate(R.layout.first_fragment, null);

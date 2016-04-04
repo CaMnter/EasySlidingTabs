@@ -44,11 +44,8 @@ import android.widget.HorizontalScrollView;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-
 import com.camnter.easyslidingtabs.R;
-
 import java.util.Locale;
-
 
 public class EasySlidingTabs extends HorizontalScrollView {
 
@@ -56,10 +53,8 @@ public class EasySlidingTabs extends HorizontalScrollView {
         int getPageIconResId(int position);
     }
 
-    private static final int[] ATTRS = new int[]{
-            android.R.attr.textSize,
-            android.R.attr.textColor
-    };
+    private static final int[] ATTRS = new int[] { android.R.attr.textSize,
+            android.R.attr.textColor };
 
     private LinearLayout.LayoutParams defaultTabLayoutParams;
     private LinearLayout.LayoutParams expandedTabLayoutParams;
@@ -110,19 +105,23 @@ public class EasySlidingTabs extends HorizontalScrollView {
     private Locale locale;
     private Drawable indicatorDrawable;
 
+
     public EasySlidingTabs(Context context) {
         this(context, null);
     }
+
 
     public EasySlidingTabs(Context context, AttributeSet attrs) {
         super(context, attrs);
         this.init(context, attrs);
     }
 
+
     public EasySlidingTabs(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
         this.init(context, attrs);
     }
+
 
     private void init(Context context, AttributeSet attrs) {
 
@@ -132,18 +131,26 @@ public class EasySlidingTabs extends HorizontalScrollView {
 
         this.tabsContainer = new LinearLayout(context);
         this.tabsContainer.setOrientation(LinearLayout.HORIZONTAL);
-        this.tabsContainer.setLayoutParams(new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT));
+        this.tabsContainer.setLayoutParams(
+                new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT));
         this.addView(tabsContainer);
 
         DisplayMetrics dm = getResources().getDisplayMetrics();
 
-        this.scrollOffset = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, scrollOffset, dm);
-        this.indicatorHeight = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, indicatorHeight, dm);
-        this.underlineHeight = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, underlineHeight, dm);
-        this.dividerPadding = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dividerPadding, dm);
-        this.tabPadding = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, tabPadding, dm);
-        this.dividerWidth = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dividerWidth, dm);
-        this.tabTextSize = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_SP, tabTextSize, dm);
+        this.scrollOffset = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,
+                scrollOffset, dm);
+        this.indicatorHeight = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,
+                indicatorHeight, dm);
+        this.underlineHeight = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,
+                underlineHeight, dm);
+        this.dividerPadding = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,
+                dividerPadding, dm);
+        this.tabPadding = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, tabPadding,
+                dm);
+        this.dividerWidth = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,
+                dividerWidth, dm);
+        this.tabTextSize = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_SP, tabTextSize,
+                dm);
 
         // get system attrs (android:textSize and android:textColor)
 
@@ -154,23 +161,34 @@ public class EasySlidingTabs extends HorizontalScrollView {
 
         // get custom attrs
         a = context.obtainStyledAttributes(attrs, R.styleable.EasySlidingTabs);
-        this.indicatorColor = a.getColor(R.styleable.EasySlidingTabs_easyIndicatorColor, indicatorColor);
-        this.underlineColor = a.getColor(R.styleable.EasySlidingTabs_easyUnderlineColor, underlineColor);
-        this.tabTextColor = a.getColor(R.styleable.EasySlidingTabs_easyTabTextColor, this.tabTextColor);
-        this.selectedTabTextColor = a.getColor(R.styleable.EasySlidingTabs_easySelectedTagTextColor, this.selectedTabTextColor);
+        this.indicatorColor = a.getColor(R.styleable.EasySlidingTabs_easyIndicatorColor,
+                indicatorColor);
+        this.underlineColor = a.getColor(R.styleable.EasySlidingTabs_easyUnderlineColor,
+                underlineColor);
+        this.tabTextColor = a.getColor(R.styleable.EasySlidingTabs_easyTabTextColor,
+                this.tabTextColor);
+        this.selectedTabTextColor = a.getColor(R.styleable.EasySlidingTabs_easySelectedTagTextColor,
+                this.selectedTabTextColor);
         this.dividerColor = a.getColor(R.styleable.EasySlidingTabs_easyDividerColor, dividerColor);
-        this.indicatorHeight = a.getDimensionPixelSize(R.styleable.EasySlidingTabs_easyIndicatorHeight, indicatorHeight);
-        this.underlineHeight = a.getDimensionPixelSize(R.styleable.EasySlidingTabs_easyUnderlineHeight, underlineHeight);
-        this.dividerPadding = a.getDimensionPixelSize(R.styleable.EasySlidingTabs_easyDividerPadding, dividerPadding);
-        this.tabPadding = a.getDimensionPixelSize(R.styleable.EasySlidingTabs_easyTabPaddingLeftRight, tabPadding);
-        this.tabBackgroundResId = a.getResourceId(R.styleable.EasySlidingTabs_easyTabBackground, tabBackgroundResId);
-        this.scrollOffset = a.getDimensionPixelSize(R.styleable.EasySlidingTabs_easyScrollOffset, scrollOffset);
-        this.shouldExpand = a.getBoolean(R.styleable.EasySlidingTabs_easyShouldExpand, shouldExpand);
+        this.indicatorHeight = a.getDimensionPixelSize(
+                R.styleable.EasySlidingTabs_easyIndicatorHeight, indicatorHeight);
+        this.underlineHeight = a.getDimensionPixelSize(
+                R.styleable.EasySlidingTabs_easyUnderlineHeight, underlineHeight);
+        this.dividerPadding = a.getDimensionPixelSize(
+                R.styleable.EasySlidingTabs_easyDividerPadding, dividerPadding);
+        this.tabPadding = a.getDimensionPixelSize(
+                R.styleable.EasySlidingTabs_easyTabPaddingLeftRight, tabPadding);
+        this.tabBackgroundResId = a.getResourceId(R.styleable.EasySlidingTabs_easyTabBackground,
+                tabBackgroundResId);
+        this.scrollOffset = a.getDimensionPixelSize(R.styleable.EasySlidingTabs_easyScrollOffset,
+                scrollOffset);
+        this.shouldExpand = a.getBoolean(R.styleable.EasySlidingTabs_easyShouldExpand,
+                shouldExpand);
         this.textAllCaps = a.getBoolean(R.styleable.EasySlidingTabs_easyTextAllCaps, textAllCaps);
         this.indicatorDrawable = a.getDrawable(R.styleable.EasySlidingTabs_easyIndicatorDrawable);
-        this.mMyUnderlinePadding = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, mMyUnderlinePadding, dm);
+        this.mMyUnderlinePadding = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,
+                mMyUnderlinePadding, dm);
         a.recycle();
-
 
         this.rectPaint = new Paint();
         this.rectPaint.setAntiAlias(true);
@@ -181,13 +199,14 @@ public class EasySlidingTabs extends HorizontalScrollView {
         this.dividerPaint.setStrokeWidth(dividerWidth);
 
         //defaultTabLayoutParams = new LinearLayout.LayoutParams(200, LayoutParams.MATCH_PARENT);
-        this.expandedTabLayoutParams = new LinearLayout.LayoutParams(0, LayoutParams.MATCH_PARENT, 1.0f);
+        this.expandedTabLayoutParams = new LinearLayout.LayoutParams(0, LayoutParams.MATCH_PARENT,
+                1.0f);
 
         if (this.locale == null) {
             this.locale = getResources().getConfiguration().locale;
         }
-
     }
+
 
     /**
      * set some value when set view pager
@@ -199,14 +218,15 @@ public class EasySlidingTabs extends HorizontalScrollView {
         // set tab divider color
         this.setDividerColor(Color.TRANSPARENT);
         // set tab under line height
-        this.setUnderlineHeight((int) TypedValue.applyDimension(
-                TypedValue.COMPLEX_UNIT_DIP, this.underlineHeight, dm));
+        this.setUnderlineHeight(
+                (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, this.underlineHeight,
+                        dm));
         // set tab indicator height
-        this.setIndicatorHeight((int) TypedValue.applyDimension(
-                TypedValue.COMPLEX_UNIT_DIP, this.indicatorHeight, dm));
+        this.setIndicatorHeight(
+                (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, this.indicatorHeight,
+                        dm));
         // set tab text size
-        this.setTextSize((int) TypedValue.applyDimension(
-                TypedValue.COMPLEX_UNIT_SP, 16, dm));
+        this.setTextSize((int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_SP, 16, dm));
         // set tab indicator color
         this.setIndicatorColor(this.indicatorColor);
         // set tab text selected color
@@ -216,6 +236,7 @@ public class EasySlidingTabs extends HorizontalScrollView {
         // remove the background color when the tab on clicked
         this.setTabBackground(0);
     }
+
 
     /**
      * Set the view pager
@@ -237,6 +258,7 @@ public class EasySlidingTabs extends HorizontalScrollView {
         this.setTabsValue();
     }
 
+
     /**
      * set the view pager change listener
      *
@@ -246,12 +268,14 @@ public class EasySlidingTabs extends HorizontalScrollView {
         this.delegatePageListener = listener;
     }
 
+
     /**
      * reset tabs
      */
     public void notifyDataSetChanged() {
         if (this.width != 0) this.addTabs();
     }
+
 
     /**
      * add tabs
@@ -282,8 +306,7 @@ public class EasySlidingTabs extends HorizontalScrollView {
 
         this.updateTabStyles();
         getViewTreeObserver().addOnGlobalLayoutListener(new OnGlobalLayoutListener() {
-            @Override
-            public void onGlobalLayout() {
+            @Override public void onGlobalLayout() {
                 getViewTreeObserver().addOnGlobalLayoutListener(this);
                 EasySlidingTabs.this.currentPosition = EasySlidingTabs.this.pager.getCurrentItem();
                 scrollToChild(EasySlidingTabs.this.currentPosition, 0);
@@ -291,28 +314,6 @@ public class EasySlidingTabs extends HorizontalScrollView {
         });
     }
 
-    /**
-     * add text view type of tab
-     * <p/>
-     * you can set the text view attribute in here
-     *
-     * @param position position
-     * @param title    title
-     * @param start    start
-     * @param top      top
-     * @param end      end
-     * @param bottom   bottom
-     */
-    private void addTextTab(final int position, SpannableString title, int start, int top, int end, int bottom) {
-        TextView tab = new TextView(getContext());
-        tab.setText(title);
-        tab.setGravity(Gravity.CENTER);
-//        You can set the text view single line
-//        tab.setSingleLine();
-        tab.setCompoundDrawablesWithIntrinsicBounds(start, top, end, bottom);
-        tab.setLineSpacing(8, 1.0f);
-        addTab(position, tab);
-    }
 
     /**
      * add text view type of tab
@@ -320,17 +321,42 @@ public class EasySlidingTabs extends HorizontalScrollView {
      * you can set the text view attribute in here
      *
      * @param position position
-     * @param title    title
+     * @param title title
+     * @param start start
+     * @param top top
+     * @param end end
+     * @param bottom bottom
+     */
+    private void addTextTab(final int position, SpannableString title, int start, int top, int end, int bottom) {
+        TextView tab = new TextView(getContext());
+        tab.setText(title);
+        tab.setGravity(Gravity.CENTER);
+        //        You can set the text view single line
+        //        tab.setSingleLine();
+        tab.setCompoundDrawablesWithIntrinsicBounds(start, top, end, bottom);
+        tab.setLineSpacing(8, 1.0f);
+        addTab(position, tab);
+    }
+
+
+    /**
+     * add text view type of tab
+     * <p/>
+     * you can set the text view attribute in here
+     *
+     * @param position position
+     * @param title title
      */
     private void addTextTab(final int position, String title) {
         TextView tab = new TextView(getContext());
         tab.setText(title);
         tab.setGravity(Gravity.CENTER);
-//        You can set the text view single line
-//        tab.setSingleLine();
+        //        You can set the text view single line
+        //        tab.setSingleLine();
         tab.setLineSpacing(5, 1.0f);
         addTab(position, tab);
     }
+
 
     /**
      * add icon type of tab
@@ -338,7 +364,7 @@ public class EasySlidingTabs extends HorizontalScrollView {
      * you can set the image button attribute in here
      *
      * @param position position
-     * @param resId    resId
+     * @param resId resId
      */
     private void addIconTab(final int position, int resId) {
         ImageButton tab = new ImageButton(getContext());
@@ -351,31 +377,31 @@ public class EasySlidingTabs extends HorizontalScrollView {
      * add tab
      *
      * @param position position
-     * @param tab      tab
+     * @param tab tab
      */
     private void addTab(final int position, View tab) {
         tab.setFocusable(true);
         tab.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View v) {
+            @Override public void onClick(View v) {
                 EasySlidingTabs.this.pager.setCurrentItem(position);
             }
         });
 
-//        You can set padding
-//        tab.setPadding(2, 0, 2, 0);
+        //        You can set padding
+        //        tab.setPadding(2, 0, 2, 0);
 
         if (this.defaultTabLayoutParams == null) {
-            if (this.width == 0)
-                this.width = getWidth();
+            if (this.width == 0) this.width = getWidth();
 
             this.tabWidth = this.width / (this.tabCount > 5 ? 5 : this.tabCount);
-            this.defaultTabLayoutParams = new LinearLayout.LayoutParams(this.tabWidth, ViewGroup.LayoutParams.MATCH_PARENT);
+            this.defaultTabLayoutParams = new LinearLayout.LayoutParams(this.tabWidth,
+                    ViewGroup.LayoutParams.MATCH_PARENT);
         }
         tab.setLayoutParams(this.defaultTabLayoutParams);
         //tabsContainer.addView(tab, position, shouldExpand ? expandedTabLayoutParams : defaultTabLayoutParams);
         this.tabsContainer.addView(tab, position);
     }
+
 
     /**
      * call this function if you call some setXXX() function
@@ -390,15 +416,16 @@ public class EasySlidingTabs extends HorizontalScrollView {
                     TextView tab = (TextView) v;
                     SpannableString spannableString = ((TabsTitleInterface) adapter).getTabTitle(i);
                     if (i == this.selectedPosition) {
-                        spannableString.setSpan(new ForegroundColorSpan(this.selectedTabTextColor), 0, spannableString.length(), Spanned.SPAN_INCLUSIVE_EXCLUSIVE);
+                        spannableString.setSpan(new ForegroundColorSpan(this.selectedTabTextColor),
+                                0, spannableString.length(), Spanned.SPAN_INCLUSIVE_EXCLUSIVE);
                         tab.setText(spannableString);
                     } else {
-                        spannableString.setSpan(new ForegroundColorSpan(this.tabTextColor), 0, spannableString.length(), Spanned.SPAN_INCLUSIVE_EXCLUSIVE);
+                        spannableString.setSpan(new ForegroundColorSpan(this.tabTextColor), 0,
+                                spannableString.length(), Spanned.SPAN_INCLUSIVE_EXCLUSIVE);
                         tab.setText(spannableString);
                     }
                 }
             }
-
         } else {
             for (int i = 0; i < this.tabCount; i++) {
                 View v = this.tabsContainer.getChildAt(i);
@@ -427,8 +454,8 @@ public class EasySlidingTabs extends HorizontalScrollView {
         }
     }
 
-    @Override
-    protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
+
+    @Override protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
         int width = getMeasuredWidth();
         int heght = getMeasuredHeight();
@@ -440,11 +467,12 @@ public class EasySlidingTabs extends HorizontalScrollView {
         }
     }
 
+
     /**
      * indicator scroll
      *
      * @param position position
-     * @param offset   offset
+     * @param offset offset
      */
     private void scrollToChild(int position, int offset) {
         if (this.tabCount == 0) {
@@ -461,13 +489,13 @@ public class EasySlidingTabs extends HorizontalScrollView {
         }
     }
 
+
     /**
      * draw the sliding tabs
      *
      * @param canvas canvas
      */
-    @Override
-    protected void onDraw(Canvas canvas) {
+    @Override protected void onDraw(Canvas canvas) {
         // OPPO device may throw nullPointerException here!!!
         try {
             super.onDraw(canvas);
@@ -482,7 +510,8 @@ public class EasySlidingTabs extends HorizontalScrollView {
 
         // draw underline
         this.rectPaint.setColor(this.underlineColor);
-        canvas.drawRect(0, height - this.underlineHeight, tabsContainer.getWidth(), height, rectPaint);
+        canvas.drawRect(0, height - this.underlineHeight, tabsContainer.getWidth(), height,
+                rectPaint);
 
         // draw indicator line
         this.rectPaint.setColor(this.indicatorColor);
@@ -497,24 +526,32 @@ public class EasySlidingTabs extends HorizontalScrollView {
             View nextTab = this.tabsContainer.getChildAt(this.currentPosition + 1);
             final float nextTabLeft = nextTab.getLeft();
             final float nextTabRight = nextTab.getRight();
-            lineLeft = (this.currentPositionOffset * nextTabLeft + (1f - this.currentPositionOffset) * lineLeft);
-            lineRight = (this.currentPositionOffset * nextTabRight + (1f - this.currentPositionOffset) * lineRight);
+            lineLeft = (this.currentPositionOffset * nextTabLeft +
+                    (1f - this.currentPositionOffset) * lineLeft);
+            lineRight = (this.currentPositionOffset * nextTabRight +
+                    (1f - this.currentPositionOffset) * lineRight);
         }
         if (this.indicatorDrawable != null) {
             int indicatorDrawableWidth = this.indicatorDrawable.getIntrinsicWidth();
-            this.indicatorDrawable.setBounds((int) (lineLeft + this.tabWidth / 2 - indicatorDrawableWidth / 2), height - this.indicatorDrawable.getIntrinsicHeight(), (int) (lineRight - tabWidth / 2 + indicatorDrawableWidth / 2), height);
+            this.indicatorDrawable.setBounds(
+                    (int) (lineLeft + this.tabWidth / 2 - indicatorDrawableWidth / 2),
+                    height - this.indicatorDrawable.getIntrinsicHeight(),
+                    (int) (lineRight - tabWidth / 2 + indicatorDrawableWidth / 2), height);
             this.indicatorDrawable.draw(canvas);
         } else {
-            canvas.drawRect(lineLeft + this.mMyUnderlinePadding, height - this.indicatorHeight, lineRight - this.mMyUnderlinePadding, height, this.rectPaint);
+            canvas.drawRect(lineLeft + this.mMyUnderlinePadding, height - this.indicatorHeight,
+                    lineRight - this.mMyUnderlinePadding, height, this.rectPaint);
         }
 
         // draw divider
         this.dividerPaint.setColor(this.dividerColor);
         for (int i = 0; i < this.tabCount - 1; i++) {
             View tab = this.tabsContainer.getChildAt(i);
-            canvas.drawLine(tab.getRight(), this.dividerPadding, tab.getRight(), height - this.dividerPadding, this.dividerPaint);
+            canvas.drawLine(tab.getRight(), this.dividerPadding, tab.getRight(),
+                    height - this.dividerPadding, this.dividerPaint);
         }
     }
+
 
     /**
      * inner page change listener
@@ -536,12 +573,13 @@ public class EasySlidingTabs extends HorizontalScrollView {
             invalidate();
 
             if (EasySlidingTabs.this.delegatePageListener != null) {
-                EasySlidingTabs.this.delegatePageListener.onPageScrolled(position, positionOffset, positionOffsetPixels);
+                EasySlidingTabs.this.delegatePageListener.onPageScrolled(position, positionOffset,
+                        positionOffsetPixels);
             }
         }
 
-        @Override
-        public void onPageScrollStateChanged(int state) {
+
+        @Override public void onPageScrollStateChanged(int state) {
             if (state == ViewPager.SCROLL_STATE_IDLE) {
                 scrollToChild(EasySlidingTabs.this.pager.getCurrentItem(), 0);
             }
@@ -551,16 +589,16 @@ public class EasySlidingTabs extends HorizontalScrollView {
             }
         }
 
-        @Override
-        public void onPageSelected(int position) {
+
+        @Override public void onPageSelected(int position) {
             EasySlidingTabs.this.selectedPosition = position;
             updateTabStyles();
             if (EasySlidingTabs.this.delegatePageListener != null) {
                 EasySlidingTabs.this.delegatePageListener.onPageSelected(position);
             }
         }
-
     }
+
 
     /**
      * set indicator color
@@ -572,6 +610,7 @@ public class EasySlidingTabs extends HorizontalScrollView {
         invalidate();
     }
 
+
     /**
      * set indicator color resource
      *
@@ -582,6 +621,7 @@ public class EasySlidingTabs extends HorizontalScrollView {
         invalidate();
     }
 
+
     /**
      * get indicator color
      *
@@ -590,6 +630,7 @@ public class EasySlidingTabs extends HorizontalScrollView {
     public int getIndicatorColor() {
         return this.indicatorColor;
     }
+
 
     /**
      * set indicator height
@@ -601,6 +642,7 @@ public class EasySlidingTabs extends HorizontalScrollView {
         invalidate();
     }
 
+
     /**
      * get indicator height
      *
@@ -609,6 +651,7 @@ public class EasySlidingTabs extends HorizontalScrollView {
     public int getIndicatorHeight() {
         return this.indicatorHeight;
     }
+
 
     /**
      * set under line height
@@ -620,6 +663,7 @@ public class EasySlidingTabs extends HorizontalScrollView {
         invalidate();
     }
 
+
     /**
      * set under line color resource
      *
@@ -630,6 +674,7 @@ public class EasySlidingTabs extends HorizontalScrollView {
         invalidate();
     }
 
+
     /**
      * get under line color
      *
@@ -638,6 +683,7 @@ public class EasySlidingTabs extends HorizontalScrollView {
     public int getUnderlineColor() {
         return this.underlineColor;
     }
+
 
     /**
      * set divider color
@@ -649,6 +695,7 @@ public class EasySlidingTabs extends HorizontalScrollView {
         invalidate();
     }
 
+
     /**
      * set divider color resource
      *
@@ -659,6 +706,7 @@ public class EasySlidingTabs extends HorizontalScrollView {
         invalidate();
     }
 
+
     /**
      * get divider color
      *
@@ -667,6 +715,7 @@ public class EasySlidingTabs extends HorizontalScrollView {
     public int getDividerColor() {
         return this.dividerColor;
     }
+
 
     /**
      * set under line height
@@ -678,6 +727,7 @@ public class EasySlidingTabs extends HorizontalScrollView {
         invalidate();
     }
 
+
     /**
      * get under line height
      *
@@ -686,6 +736,7 @@ public class EasySlidingTabs extends HorizontalScrollView {
     public int getUnderlineHeight() {
         return this.underlineHeight;
     }
+
 
     /**
      * set divider padding
@@ -697,6 +748,7 @@ public class EasySlidingTabs extends HorizontalScrollView {
         invalidate();
     }
 
+
     /**
      * get divider padding
      *
@@ -705,6 +757,7 @@ public class EasySlidingTabs extends HorizontalScrollView {
     public int getDividerPadding() {
         return this.dividerPadding;
     }
+
 
     /**
      * set scroll offset
@@ -716,6 +769,7 @@ public class EasySlidingTabs extends HorizontalScrollView {
         invalidate();
     }
 
+
     /**
      * get scroll offset
      *
@@ -725,15 +779,15 @@ public class EasySlidingTabs extends HorizontalScrollView {
         return this.scrollOffset;
     }
 
+
     /**
      * set expand status
-     *
-     * @param shouldExpand
      */
     public void setShouldExpand(boolean shouldExpand) {
         this.shouldExpand = shouldExpand;
         this.notifyDataSetChanged();
     }
+
 
     /**
      * get espand status
@@ -744,6 +798,7 @@ public class EasySlidingTabs extends HorizontalScrollView {
         return shouldExpand;
     }
 
+
     /**
      * get text all caps status
      *
@@ -753,6 +808,7 @@ public class EasySlidingTabs extends HorizontalScrollView {
         return textAllCaps;
     }
 
+
     /**
      * set text all caps status
      *
@@ -761,6 +817,7 @@ public class EasySlidingTabs extends HorizontalScrollView {
     public void setAllCaps(boolean textAllCaps) {
         this.textAllCaps = textAllCaps;
     }
+
 
     /**
      * set text size
@@ -772,12 +829,14 @@ public class EasySlidingTabs extends HorizontalScrollView {
         this.updateTabStyles();
     }
 
+
     /**
      * get under line padding
      */
     public void setUnderlinePadding0() {
         mMyUnderlinePadding = 0;
     }
+
 
     /**
      * get text size
@@ -787,6 +846,7 @@ public class EasySlidingTabs extends HorizontalScrollView {
     public int getTextSize() {
         return tabTextSize;
     }
+
 
     /**
      * set text color
@@ -798,6 +858,7 @@ public class EasySlidingTabs extends HorizontalScrollView {
         this.updateTabStyles();
     }
 
+
     /**
      * set text color resource
      *
@@ -808,6 +869,7 @@ public class EasySlidingTabs extends HorizontalScrollView {
         this.updateTabStyles();
     }
 
+
     /**
      * get text color
      *
@@ -816,6 +878,7 @@ public class EasySlidingTabs extends HorizontalScrollView {
     public int getTextColor() {
         return this.tabTextColor;
     }
+
 
     /**
      * set text selected color
@@ -827,6 +890,7 @@ public class EasySlidingTabs extends HorizontalScrollView {
         this.updateTabStyles();
     }
 
+
     /**
      * set text selected color resource
      *
@@ -837,6 +901,7 @@ public class EasySlidingTabs extends HorizontalScrollView {
         this.updateTabStyles();
     }
 
+
     /**
      * get text selected color
      *
@@ -846,17 +911,19 @@ public class EasySlidingTabs extends HorizontalScrollView {
         return this.selectedTabTextColor;
     }
 
+
     /**
      * set typeface
      *
      * @param typeface typeface
-     * @param style    style
+     * @param style style
      */
     public void setTypeface(Typeface typeface, int style) {
         this.tabTypeface = typeface;
         this.tabTypefaceStyle = style;
         this.updateTabStyles();
     }
+
 
     /**
      * set tab background
@@ -868,6 +935,7 @@ public class EasySlidingTabs extends HorizontalScrollView {
         this.updateTabStyles();
     }
 
+
     /**
      * get tab background
      *
@@ -876,6 +944,7 @@ public class EasySlidingTabs extends HorizontalScrollView {
     public int getTabBackground() {
         return this.tabBackgroundResId;
     }
+
 
     /**
      * set tab padding left and padding right
@@ -887,6 +956,7 @@ public class EasySlidingTabs extends HorizontalScrollView {
         this.updateTabStyles();
     }
 
+
     /**
      * get tab padding left and padding right
      *
@@ -896,21 +966,22 @@ public class EasySlidingTabs extends HorizontalScrollView {
         return this.tabPadding;
     }
 
-    @Override
-    public void onRestoreInstanceState(Parcelable state) {
+
+    @Override public void onRestoreInstanceState(Parcelable state) {
         SavedState savedState = (SavedState) state;
         super.onRestoreInstanceState(savedState.getSuperState());
         this.currentPosition = savedState.currentPosition;
         requestLayout();
     }
 
-    @Override
-    public Parcelable onSaveInstanceState() {
+
+    @Override public Parcelable onSaveInstanceState() {
         Parcelable superState = super.onSaveInstanceState();
         SavedState savedState = new SavedState(superState);
         savedState.currentPosition = this.currentPosition;
         return savedState;
     }
+
 
     /**
      * in order to save position status
@@ -918,29 +989,31 @@ public class EasySlidingTabs extends HorizontalScrollView {
     static class SavedState extends BaseSavedState {
         int currentPosition;
 
+
         public SavedState(Parcelable superState) {
             super(superState);
         }
+
 
         private SavedState(Parcel in) {
             super(in);
             this.currentPosition = in.readInt();
         }
 
-        @Override
-        public void writeToParcel(Parcel dest, int flags) {
+
+        @Override public void writeToParcel(Parcel dest, int flags) {
             super.writeToParcel(dest, flags);
             dest.writeInt(this.currentPosition);
         }
 
+
         public static final Creator<SavedState> CREATOR = new Creator<SavedState>() {
-            @Override
-            public SavedState createFromParcel(Parcel in) {
+            @Override public SavedState createFromParcel(Parcel in) {
                 return new SavedState(in);
             }
 
-            @Override
-            public SavedState[] newArray(int size) {
+
+            @Override public SavedState[] newArray(int size) {
                 return new SavedState[size];
             }
         };
@@ -960,5 +1033,4 @@ public class EasySlidingTabs extends HorizontalScrollView {
 
         int getTabDrawableTop(int position);
     }
-
 }

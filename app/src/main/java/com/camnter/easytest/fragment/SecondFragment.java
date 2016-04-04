@@ -7,9 +7,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
 import com.camnter.easytest.R;
-
 
 /**
  * Description：SecondFragment
@@ -22,23 +20,22 @@ public class SecondFragment extends Fragment {
 
     private static SecondFragment instance;
 
-    @SuppressLint("ValidFragment")
-    private SecondFragment() {
+
+    @SuppressLint("ValidFragment") private SecondFragment() {
     }
+
 
     public static SecondFragment getInstance() {
         if (instance == null) {
             synchronized (SecondFragment.class) {
-                if (instance == null)
-                    instance = new SecondFragment();
+                if (instance == null) instance = new SecondFragment();
             }
         }
         return instance;
     }
 
-    @SuppressLint("InflateParams")
-    @Nullable
-    @Override
+
+    @SuppressLint("InflateParams") @Nullable @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         if (this.self == null) {
             this.self = inflater.inflate(R.layout.second_fragment, null);
