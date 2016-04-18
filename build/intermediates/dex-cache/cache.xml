@@ -2,25 +2,39 @@
 <items version="2" >
 
     <item
-        jar="/Users/CaMnter/GitHub/EasySlidingTabs/app/build/intermediates/transforms/instantRunSlicer/debug/jars/1/5/main_slice.jar"
+        jar="/Users/CaMnter/GitHub/EasySlidingTabs/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.1/jars/libs/internal_impl-23.0.1.jar"
         jumboMode="false"
         revision="23.0.1"
-        sha1="fc1936ae2563cd4756adc9baa406496896b1cc60">
-        <dex dex="/Users/CaMnter/GitHub/EasySlidingTabs/app/build/intermediates/transforms/dex/debug/folders/1000/5/main_slice_91d223e30183dc2a3ffce07073b9ace60211b143/classes.dex" />
+        sha1="aa92916125166649d8ad4ba3940c3dd7515596d3">
+        <dex dex="/Users/CaMnter/GitHub/EasySlidingTabs/app/build/intermediates/pre-dexed/debug/internal_impl-23.0.1_1defdd7d66a7d6dbfeb0c988b6ea0d4f7c337190.jar" />
     </item>
     <item
-        jar="/Users/CaMnter/GitHub/EasySlidingTabs/app/build/intermediates/transforms/instantRunSlicer/debug/jars/1/5/main_sliceb.jar"
+        jar="/Users/CaMnter/GitHub/EasySlidingTabs/app/build/intermediates/exploded-aar/com.camnter.easyslidingtabs/easyslidingtabs/1.0/jars/classes.jar"
         jumboMode="false"
         revision="23.0.1"
-        sha1="90c84f8b45c1a78bc7ed771e0a4417b38ba0aa52">
-        <dex dex="/Users/CaMnter/GitHub/EasySlidingTabs/app/build/intermediates/transforms/dex/debug/folders/1000/5/main_sliceb_28825aa7decb7acfaf50700765a05c9d8477c610/classes.dex" />
+        sha1="f435766389e2a1513bfaea49cad7e80c5f4c4545">
+        <dex dex="/Users/CaMnter/GitHub/EasySlidingTabs/app/build/intermediates/pre-dexed/debug/com.camnter.easyslidingtabs-easyslidingtabs-1.0_b02eabd7260a7251b24b3b41bcb06a9a80c027ab.jar" />
     </item>
     <item
-        jar="/Users/CaMnter/GitHub/EasySlidingTabs/app/build/intermediates/transforms/instantRunSlicer/debug/jars/1/1a/dependencies.jar"
+        jar="/Users/CaMnter/GitHub/EasySlidingTabs/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.1/jars/classes.jar"
         jumboMode="false"
         revision="23.0.1"
-        sha1="bda84e390c6e98763979acc1865c5f7c38054f85">
-        <dex dex="/Users/CaMnter/GitHub/EasySlidingTabs/app/build/intermediates/transforms/dex/debug/folders/1000/1a/dependencies_e14eff847f1c970102b7ff065e95a283a65029f1/classes.dex" />
+        sha1="c31e21b53ff2f74664e498248d01453a32e32d48">
+        <dex dex="/Users/CaMnter/GitHub/EasySlidingTabs/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-23.0.1_de7ed1cff38d7b3d7c12b161199e403516e98cd4.jar" />
+    </item>
+    <item
+        jar="/Users/CaMnter/Android/adt-bundle-mac-x86_64-20140702/sdk/extras/android/m2repository/com/android/support/support-annotations/23.0.1/support-annotations-23.0.1.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="1fce89a6428c51467090d7f424e4c9c3dbd55f7e">
+        <dex dex="/Users/CaMnter/GitHub/EasySlidingTabs/app/build/intermediates/pre-dexed/debug/support-annotations-23.0.1_6eeb567b5577cb13f261fcbf834bde359ae3454a.jar" />
+    </item>
+    <item
+        jar="/Users/CaMnter/GitHub/EasySlidingTabs/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="d86429b0f0b3f3cafbeb78dda1b9d89119ccb05d">
+        <dex dex="/Users/CaMnter/GitHub/EasySlidingTabs/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-23.0.1_ffd36ed1dd8394cad8e5fb7eca5ae7a0bb1f6163.jar" />
     </item>
 
 </items>
