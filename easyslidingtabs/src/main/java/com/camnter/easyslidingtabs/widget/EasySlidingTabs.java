@@ -212,6 +212,8 @@ public class EasySlidingTabs extends HorizontalScrollView {
         if (this.locale == null) {
             this.locale = getResources().getConfiguration().locale;
         }
+
+        this.getViewTreeObserver().addOnGlobalLayoutListener(this.onGlobalLayoutListener);
     }
 
 
@@ -312,8 +314,6 @@ public class EasySlidingTabs extends HorizontalScrollView {
         }
 
         this.updateTabStyles();
-
-        this.getViewTreeObserver().addOnGlobalLayoutListener(this.onGlobalLayoutListener);
     }
 
 

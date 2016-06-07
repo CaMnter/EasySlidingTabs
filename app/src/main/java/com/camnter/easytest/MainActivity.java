@@ -70,6 +70,7 @@ public class MainActivity extends AppCompatActivity {
                 this.fragments);
         this.easyVP.setAdapter(this.adapter);
         this.easySlidingTabs.setViewPager(this.easyVP);
+
     }
 
 
