@@ -105,6 +105,13 @@ public class EasySlidingTabs extends HorizontalScrollView {
     private Locale locale;
     private Drawable indicatorDrawable;
 
+    private OnGlobalLayoutListener onGlobalLayoutListener = new OnGlobalLayoutListener() {
+        @Override public void onGlobalLayout() {
+            EasySlidingTabs.this.currentPosition = EasySlidingTabs.this.pager.getCurrentItem();
+            scrollToChild(EasySlidingTabs.this.currentPosition, 0);
+        }
+    };
+
 
     public EasySlidingTabs(Context context) {
         this(context, null);
@@ -305,13 +312,8 @@ public class EasySlidingTabs extends HorizontalScrollView {
         }
 
         this.updateTabStyles();
-        getViewTreeObserver().addOnGlobalLayoutListener(new OnGlobalLayoutListener() {
-            @Override public void onGlobalLayout() {
-                getViewTreeObserver().addOnGlobalLayoutListener(this);
-                EasySlidingTabs.this.currentPosition = EasySlidingTabs.this.pager.getCurrentItem();
-                scrollToChild(EasySlidingTabs.this.currentPosition, 0);
-            }
-        });
+
+        this.getViewTreeObserver().addOnGlobalLayoutListener(this.onGlobalLayoutListener);
     }
 
 
